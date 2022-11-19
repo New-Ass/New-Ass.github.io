@@ -441,9 +441,9 @@
 <p>那么这其中的原理又是什么呢？简单来说，就是程序访问和我们使用浏览器访问是有区别的，被请求的服务器都是靠 user-agent 来判断访问者的身份，如果是浏览器就接受请求，否则就拒绝。这就是一个很常见的反爬机制。</p>
 <p>那是不是我们就没有办法呢？非也~所谓魔高一尺，道高一丈。既然要识别 user-agent ，那么我们就让爬虫模拟 user-agent 好了。</p>
 <p>在 python 中模拟输入数据或是 user-agent ，我们一般用字典<br>就这样子写：</p>
-<pre class=" language-python"><code class="language-python">header <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+<pre class=" language-python"><code class="language-python">header <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">"user-agent"</span><span class="token punctuation">:</span> <span class="token string">""</span> <span class="token comment" spellcheck="true"># user-agent 的值 是一个长字符串</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token punctuation">}</span>
 </code></pre>
 <p>那么  user-agent 的值又是怎么得到的呢？<br>    1. 打开任意网页，右键点击，选择“检查”<br><img src="https://img-blog.csdnimg.cn/20210415112140584.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NoaUppZURlWWluWXU=,size_16,color_FFFFFF,t_70"><br>    2. 选择“ Network ”（谷歌浏览器）（如果是中文，就选择 “网络” 这一项）<br><img src="https://img-blog.csdnimg.cn/20210415112339671.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NoaUppZURlWWluWXU=,size_16,color_FFFFFF,t_70"><br>    3. 如果发现点开是空白的，像这样，那就刷新网页<br>    <img src="https://img-blog.csdnimg.cn/2021041511261560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NoaUppZURlWWluWXU=,size_16,color_FFFFFF,t_70"><br>    刷新后是这样的：<br>    <img src="https://img-blog.csdnimg.cn/20210415112717305.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NoaUppZURlWWluWXU=,size_16,color_FFFFFF,t_70"><br>然后随机选择红笔圈起来的一项，我们会看到这样的东西，然后在里面找到“user-agent”，把它的值复制下来就行了<br><img src="https://img-blog.csdnimg.cn/20210415113039196.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1NoaUppZURlWWluWXU=,size_16,color_FFFFFF,t_70"><br>有了 “user-agent”， 我们在重新写我们的爬取网页的代码，就可以了</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> requests
@@ -453,9 +453,9 @@
     url <span class="token operator">=</span> <span class="token string">"https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=2&amp;tn=93923645_hao_pg&amp;wd=%E5%A5%A5%E7%89%B9%E6%9B%BC&amp;rsv_spt=1&amp;oq=%25E7%2588%25AC%25E5%258F%2596%25E7%2599%25BE%25E5%25BA%25A6%25E9%25A6%2596%25E9%25A1%25B5&amp;rsv_pq=b233dcfd0002d2d8&amp;rsv_t=ccdbEuqbJfqtjnkFvevj%2BfxQ0Sj2UP88ixXHTNUNsmTa9yWEWTUEgxTta9r%2Fj3mXxDs%2BT1SU&amp;rqlang=cn&amp;rsv_dl=tb&amp;rsv_enter=1&amp;rsv_sug3=8&amp;rsv_sug1=5&amp;rsv_sug7=100&amp;rsv_sug2=0&amp;rsv_btype=t&amp;inputT=1424&amp;rsv_sug4=1424"</span>
 
     <span class="token comment" spellcheck="true"># 模拟 “user-agent”，即 UA伪装</span>
-    header <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    header <span class="token operator">=</span> <span class="token punctuation">{</span>
         <span class="token string">"user-agent"</span> <span class="token punctuation">:</span> <span class="token string">""</span> <span class="token comment" spellcheck="true"># 复制的 user-agent 的值</span>
-        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true"># 发送请求</span>
     response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers <span class="token operator">=</span> header<span class="token punctuation">)</span>
 
