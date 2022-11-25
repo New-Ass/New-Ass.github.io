@@ -364,21 +364,590 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-selenium-mo-kuai-1/">
+                    <a href="/2022/11/22/jian-yi-jie-mian-pa-chong-xiao-xiang-mu/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="工欲善其事，必先利其器 —— selenium模块（1）">
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="简易界面爬虫小项目">
                             
-                            <span class="card-title">工欲善其事，必先利其器 —— selenium模块（1）</span>
+                            <span class="card-title">简易界面爬虫小项目</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                简单介绍selenium最初是一个自动化测试工具,而爬虫中使用它主要是为了解决requests无法直接执行JavaScript代码的问题
-selenium本质是通过驱动浏览器，完全模拟浏览器的操作，比如跳转、输入、点击、下拉等，来拿到网页渲
+                                项目目录
+注意事项
+本来是要再做一个界面在运行时显示正在爬取哪个内容
+log 文件本来是要做一个日志文件，不过其实是单机版本其实好像没什么必要（实际上是嫌太麻烦了）
+
+代码演示lib 文件夹下 main.py 文件 import os,sy
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/PyQt5/">
+                            <span class="chip bg-color">PyQt5</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/pa-chong-xiao-xiang-mu-jing-dong-shang-pin-ping-jie-nei-rong-pa-qu/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="爬虫小项目 —— 京东商品评价内容爬取">
+                            
+                            <span class="card-title">爬虫小项目 —— 京东商品评价内容爬取</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                爬虫小项目 —— 京东商品评价内容爬取前言会写这么一个类似“小项目”的程序是因为在前年（去年？）的时候，一位老师需要用爬虫爬取京东某类商品的用户评论数据——不知道为什么会找学生写这种程序，淘宝找一个或许都比我靠谱吧？虽然我最后写出了一个勉强
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-guan-yu-xia-zai-zhong-jian-jian-de-bu-chong/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="行百里者半九十 —— scrapy 框架关于下载中间件的补充">
+                            
+                            <span class="card-title">行百里者半九十 —— scrapy 框架关于下载中间件的补充</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                下载中间件拦截请求需求在《行百里者半九十 —— scrapy 框架（6）》一文中我们介绍了下载中间件的作用，并演示了其中拦截响应的代码实现。
+现在我们来试着实现拦截请求的代码实现，也就是UA池和代理池的实现。因为免费 IP 总是失效，所以在
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-7/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="行百里者半九十——scrapy 框架（7）">
+                            
+                            <span class="card-title">行百里者半九十——scrapy 框架（7）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                CrawlSpider 实现全站数据爬取CrawlSpider 介绍全站数据爬取的方式        -- 基于 Spider：手动请求（递归实现）
+        -- 基于 CrawlSpider
+
+CrawlSpider（Spider
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-6/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="行百里者半九十——scrapy 框架（6）">
+                            
+                            <span class="card-title">行百里者半九十——scrapy 框架（6）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                中间件的使用——爬取网易新闻scrapy 五大核心组件引擎（Scrapy）用来处理整个系统的数据流量，触发事务（框架核心）
+调度器（Scheduler）用来接受引擎发送的请求，压入队列中，并在引擎再次请求的时候返回，可以想象成一个 URL 
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-5/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="行百里者半九十——scrapy 框架（5）">
+                            
+                            <span class="card-title">行百里者半九十——scrapy 框架（5）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                scrapy爬取图片需求爬取站长素材中的图片
+图片数据爬取之ImagesPipelinescrapy爬取图片xpath 解析出图片 src 的属性值。单独对图片地址发起请求获取图片二进制类型的数据。
+ImagesPipeline只需要将 i
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-4/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="行百里者半九十——scrapy 框架（4）">
+                            
+                            <span class="card-title">行百里者半九十——scrapy 框架（4）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                深度爬取——请求传参目的爬取 校花网 中港台明星的名字和简介
+信息分别在两个页面里
+
+思路分析我们发现要实现这个目的，我们既要对原页面进行数据爬取，也要对详情页进行明星简介的爬取。
+这时候我们似乎可以使用前面学的回调函数的方法，调用一个新的
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-3/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="行百里者半九十——scrapy 框架（3）">
+                            
+                            <span class="card-title">行百里者半九十——scrapy 框架（3）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                全站数据爬取：以校花网为例目的爬取 校花网 中全部照片的名称，以生活照为例。
+思路分析如果不用 scrapy 框架实现全站数据爬取其实是简单的，只要找到网址的规律一直遍历就行。那么如果要用scrapy框架实现全站数据爬取应该怎么办呢？
+其实
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-2/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="行百里者半九十——scrapy 框架（2）">
+                            
+                            <span class="card-title">行百里者半九十——scrapy 框架（2）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                scrapy 持久化存储（以糗事百科为例）前言不知道大家还记得爬虫万能的三步骤吗？没错，那就是指定URL，发送请求，持久化保存数据。
+我们前面在 scrapy框架（1）中简单了解了使用 scrapy 指定URL和发送请求，那么我们又要怎么使
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/xing-bai-li-zhe-ban-jiu-shi-scrapy-kuang-jia-1/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="行百里者半九十——scrapy 框架（1）">
+                            
+                            <span class="card-title">行百里者半九十——scrapy 框架（1）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                scrapy 框架初识安装如果没记错，python 3.6 及以上版本可以直接用 pip install scrapy.但具体是从哪个版本开始可以这样我也不是很清楚，因为我使用的 python 3.95，所以我是直接用pip安装的。也正因为
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
+                                    爬虫
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python/">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">爬虫</span>
+                        </a>
+                        
+                        <a href="/tags/scrapy/">
+                            <span class="chip bg-color">scrapy</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/11/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-selenium-mo-kuai-6/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="工欲善其事，必先利其器 —— selenium模块（6）">
+                            
+                            <span class="card-title">工欲善其事，必先利其器 —— selenium模块（6）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                selenium 综合应用 （2）需求模拟登录 12306
+注意：目的在于验证码的识别。因为除了点击，12306在登录后还存在滑块验证码。本篇文章并不涉及滑块验证码。
+代码分析
+首先需要定位并点击 “账号登陆”
+
+然后问题就是账号密码和验证
                             
                         </div>
                         <div class="publish-info">
@@ -420,27 +989,24 @@ selenium本质是通过驱动浏览器，完全模拟浏览器的操作，比如
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2022/11/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-xie-cheng-3/">
+                    <a href="/2022/11/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-selenium-mo-kuai-5/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="工欲善其事，必先利其器——协程（3）">
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="工欲善其事，必先利其器 —— selenium模块（5）">
                             
-                            <span class="card-title">工欲善其事，必先利其器——协程（3）</span>
+                            <span class="card-title">工欲善其事，必先利其器 —— selenium模块（5）</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                用 aiohttp 完成异步爬取图片代码演示import asyncio
-import requests
-from lxml import etree
-import aiohttp
-import time
-import os
+                                selenium 综合应用（1）需求模拟浏览器，从京东首页开始输入关键词，爬取两页商品的名称、价格和一页评价（只包括文字，不包括视频）。评价包括用户的名称和星数。
+网页分析
+首先定位搜索框的位置
 
-async 
+前面说过商品页的商品是动态加载。不然我们只
                             
                         </div>
                         <div class="publish-info">
@@ -471,580 +1037,8 @@ async
                             <span class="chip bg-color">爬虫</span>
                         </a>
                         
-                        <a href="/tags/%E5%8D%8F%E7%A8%8B/">
-                            <span class="chip bg-color">协程</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-xie-cheng-2/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="工欲善其事，必先利其器——协程（2）">
-                            
-                            <span class="card-title">工欲善其事，必先利其器——协程（2）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                resquests 协程的尝试前面我们学习了协程的简单的语法，以及写了一段代码实现了简单的协程。而我们的目的是为了实现异步爬虫。所以我们就用 requests 模块尝试一下协程
-flask服务首先我们用 flask 设置一个简单的框架，因为
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%8D%8F%E7%A8%8B/">
-                            <span class="chip bg-color">协程</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/22/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-xie-cheng-1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="工欲善其事，必先利其器——协程（1）">
-                            
-                            <span class="card-title">工欲善其事，必先利其器——协程（1）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                什么是协程简单来说，协程就是同时开启多个任务，但一次只顺序执行一个。等到所执行的任务遭遇阻塞，就切换到下一个任务继续执行，以期节省下阻塞所占用的时间。
-简单说明
-简单的代码示例import asyncio
-import time
-
-asyn
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-22
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/%E5%8D%8F%E7%A8%8B/">
-                            <span class="chip bg-color">协程</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-xian-cheng-chi-de-shi-yong-2/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="工欲善其事，必先利其器——线程池的使用（2）">
-                            
-                            <span class="card-title">工欲善其事，必先利其器——线程池的使用（2）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                好吧，我们前面爬取图片发现使用了线程池后，其实我们的效率提高不是这么明显。那我们就来试一试爬取视频吧。因为不同的网站对视频的反爬的策略都不尽相同，所以我们这里讲的示例并没有普世的意义。唯一普世的做法是好好分析视频网址的存放地址。
-需求首先来
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-                            <span class="chip bg-color">线程池</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-xian-cheng-chi-de-shi-yong-1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="工欲善其事，必先利其器——线程池的使用(1)">
-                            
-                            <span class="card-title">工欲善其事，必先利其器——线程池的使用(1)</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                学到现在，我们可以说已经学习了爬虫的基础知识，如果没有那些奇奇怪怪的反爬虫机制，基本上只要有时间分析，一般的数据都是可以爬取的，那么到了这个时候我们需要考虑的就是爬取的效率了，关于提高爬虫效率，也就是实现异步爬虫，我们可以考虑以下两种方式：
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
-                            <span class="chip bg-color">线程池</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-shi-bie-yan-zheng-ma-2/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="工欲善其事，必先利其器——识别验证码（2）">
-                            
-                            <span class="card-title">工欲善其事，必先利其器——识别验证码（2）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                模拟登录人人网前面我们学习了使用第三方平台实现验证码的识别，那现在就让我们来用验证码的识别实现人人网的登录。
-首先我们先到人人网的登录页面去踩点。
-人人网登录在三次失败后需要输入验证码，那我们现在需要做的就是通过数据解析将验证码保存到本地（
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB%E8%AF%86%E5%88%AB%E9%AA%8C%E8%AF%81%E7%A0%81/">
-                            <span class="chip bg-color">爬虫识别验证码</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/gong-yu-shan-qi-shi-bi-xian-li-qi-qi-shi-bie-yan-zheng-ma-1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="工欲善其事，必先利其器——识别验证码（1）">
-                            
-                            <span class="card-title">工欲善其事，必先利其器——识别验证码（1）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                验证码识别我们使用爬虫时很有可能需要登录，而现在的平台登陆时都需要验证码才能完成登录，所以我们使用爬虫模拟登录时验证码是必须要跨过的坎。一般情况下，我们使用第三方平台实现验证码的识别。
-所以我在这里介绍一个识别验证码的平台——图鉴（比较常见
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB%E8%AF%86%E5%88%AB%E9%AA%8C%E8%AF%81%E7%A0%81/">
-                            <span class="chip bg-color">爬虫识别验证码</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/bing-dong-san-chi-fei-yi-ri-zhi-han-shu-ju-jie-xi-xpath-4/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="冰冻三尺，非一日之寒。数据解析——xpath（4）">
-                            
-                            <span class="card-title">冰冻三尺，非一日之寒。数据解析——xpath（4）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                爬取全国的城市名称以及“或”的简单介绍首先是爬取全国城市名称
-网址如下：https://www.aqistudy.cn/historydata/
-我们打开网页进行简单的数据分析
-我们发现我们需要爬取的名称都在 li 标签里。根据这个我们可以
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/xpath/">
-                            <span class="chip bg-color">xpath</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/bing-dong-san-chi-fei-yi-ri-zhi-han-shu-ju-jie-xi-xpath-3/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="冰冻三尺，非一日之寒。数据解析——xpath（3）">
-                            
-                            <span class="card-title">冰冻三尺，非一日之寒。数据解析——xpath（3）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                什么？我怎么又讲爬取图片？拜托，这可是 4k 图片，清晰度杠杠的。再说，爬取糗图算什么本事，做人要爬取的肯定是妹子图片，而且是 4k 的妹子图片，是不是很激动？放心，这次不晃你。
-源码分析首先让我们打开网页，好好欣赏一下美丽的妹子……哦不，
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/xpath/">
-                            <span class="chip bg-color">xpath</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/bing-dong-san-chi-fei-yi-ri-zhi-han-shu-ju-jie-xi-xpath-2/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="冰冻三尺，非一日之寒。数据解析——xpath（2）">
-                            
-                            <span class="card-title">冰冻三尺，非一日之寒。数据解析——xpath（2）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                爬取二手房信息说到二手房信息，不知道你们心里最先跳出来的公司（网站）是什么，反正我心里第一个跳出来的是网站是 58 同城。哎呦，我这暴脾气，想到就赶紧去干。
-但很显然，我失败了。说显然，而不是不幸，这是因为 58 同城是大公司，我这点本事爬
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/xpath/">
-                            <span class="chip bg-color">xpath</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2022/11/21/bing-dong-san-chi-fei-yi-ri-zhi-han-shu-ju-jie-xi-xpath-1/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="冰冻三尺，非一日之寒。数据解析——xpath（1）">
-                            
-                            <span class="card-title">冰冻三尺，非一日之寒。数据解析——xpath（1）</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                xpah 的语法认识闲话少说，直接上图
-xpath 爬取图片代码如下
-import requests
-from lxml import etree
-import os
-
-if __name__ == "__main__":
-    # 创建
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-21
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
-                        </a>
-                        
-                        <a href="/tags/%E7%88%AC%E8%99%AB/">
-                            <span class="chip bg-color">爬虫</span>
-                        </a>
-                        
-                        <a href="/tags/xpath/">
-                            <span class="chip bg-color">xpath</span>
+                        <a href="/tags/selenium/">
+                            <span class="chip bg-color">selenium</span>
                         </a>
                         
                     </div>
@@ -1069,7 +1063,7 @@ if __name__ == "__main__":
             
         </div>
         <div class="page-info col m4 l4 hide-on-small-only">
-            <div class="center-align b-text-gray">3 / 4</div>
+            <div class="center-align b-text-gray">3 / 6</div>
         </div>
         <div class="col s6 m4 l4">
             
@@ -1100,7 +1094,7 @@ if __name__ == "__main__":
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">47.8k</span>&nbsp;字
+                class="white-color">69.9k</span>&nbsp;字
             
             
             
